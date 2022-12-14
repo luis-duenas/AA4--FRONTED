@@ -1,0 +1,39 @@
+<mat-toolbar color="warn">
+    <a routerLink="/" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>home</mat-icon>
+    </a>
+    <span class="example-spacer">Portal Luis</span>
+  
+      <a routerLink="/listamatricula" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+      Lista Matricula
+    </a>
+    <a routerLink="/listaestudiante" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+      Lista Estudiante
+    </a>
+    <a routerLink="/listaclase" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+      Lista Clase
+    </a>
+    <a routerLink="/login" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+      Cerrar Sesión
+    </a>
+  
+  </mat-toolbar>
+  
+<div class="container">
+    <h5 class="card-title">{{titulo}}</h5>
+    <form>
+        <div class="form-group row">
+            <label for="nombres" class="col- form-label col-sm-2">Titulo</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="nombres" required [(ngModel)]="clase.aIdTitulo">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="nombres" class="col- form-label col-sm-2">DESCRIPCION</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="apellidos" required [(ngModel)]="clase.aDescripcion">
+            </div>
+        </div>
+        <button class="btn btn-success" role="button" (click)='create()'>Registrar</button>
+    </form>
+</div>

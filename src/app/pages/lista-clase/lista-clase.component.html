@@ -1,0 +1,46 @@
+<mat-toolbar color="warn">
+  <a routerLink="/" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>home</mat-icon>
+  </a>
+  <span class="example-spacer">Portal Luis</span>
+
+    <a routerLink="/listamatricula" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+    Lista Matricula
+  </a>
+  <a routerLink="/listaestudiante" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+    Lista Estudiante
+  </a>
+  <a routerLink="/listaclase" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+    Lista Clase
+  </a>
+  <a routerLink="/login" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+    Cerrar Sesión
+  </a>
+
+</mat-toolbar>
+
+
+
+
+<div class="container">
+<h1>Lista de Clases</h1>
+<button class="btn btn-info" type="button" [routerLink]="['/formclase']">Nueva Clase</button>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID CLASE</th>
+      <th scope="col">TITULO</th>
+      <th scope="col">DESCRIPCION</th>
+      <th scope="col">RETIRAR CLASE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let clase of clases">
+      <th scope="row"> {{clase.aIdClase}} </th>
+      <td>{{ clase.aIdTitulo}}</td>
+      <td>{{ clase.aDescripcion}}</td>
+      <button class="btn btn-danger"(click)="delete(clase)">Eliminar Clase</button>
+    </tr>
+  </tbody>
+</table>
+</div>
